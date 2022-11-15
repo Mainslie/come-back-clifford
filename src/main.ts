@@ -1,3 +1,5 @@
+var colors = require("colors");
+
 export interface Location {
     height: number;
     width: number;
@@ -7,7 +9,7 @@ enum Spot {
     Clifford = "🦮",
     Poop = "💩",
     Owner = "🏃🏼‍♂️",
-    Blank = "🟩",
+    Blank = "~~",
 }
 
 class Field {
@@ -28,7 +30,7 @@ class Field {
         this.map = new Array(this.height);
 
         for (var i = 0; i < this.height; i++) {
-            this.map[i] = new Array(this.width).fill(Spot.Blank);
+            this.map[i] = new Array(this.width).fill(colors.green(Spot.Blank));
         }
         this.addSpots();
     }
@@ -88,7 +90,7 @@ class Field {
 
     printField() {
         for (var i = 0; i < this.height; i++) {
-            console.log(this.map[i].join(""));
+            console.log(colors.bgGreen(this.map[i].join("")));
         }
     }
 }
