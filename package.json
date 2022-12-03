@@ -1,9 +1,9 @@
 {
-    "name": "find-your-hat",
+    "name": "come-back-clifford",
     "version": "1.0.0",
-    "description": "A terminal maze-solving game.",
+    "description": "Come Back Clifford: Catch your dog",
     "main": "main.js",
-    "author": "Codecademy",
+    "author": "Michaela Fung",
     "license": "ISC",
     "dependencies": {
         "colors": "^1.4.0",
